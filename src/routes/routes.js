@@ -59,6 +59,12 @@ router.put('/users/:id/status', newUser.setUserStatus);
 //get user status
 router.get('/users/:id/status', newUser.getUserStatus);
 
+//set user level
+router.put('/users/:id/level', newUser.setUserLevel);
+
+//get user level
+router.get('/users/:id/level', newUser.getUserLevel);
+
 //get user gender
 router.get('/users/:id/gender', newUser.getUserGender);
 
