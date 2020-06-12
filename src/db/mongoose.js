@@ -1,8 +1,8 @@
-import mongoose from 'mongoose';
-import env from 'dotenv';
+const mongoose = require('mongoose');
 
-env.config();
+const dotenv = require('dotenv');
 
+dotenv.config();
 const connectToDatabase = () => {
     mongoose.connect(process.env.ATLAS_URI, {
         useUnifiedTopology: true,
@@ -15,7 +15,6 @@ const connectToDatabase = () => {
 
     mongoose.Promise = global.Promise; // Tell Mongoose to use ES6 promises
 };
-
-// mongodb://127.0.0.1:27017/Team-Granite-Dockerized-Users-Management-App-db,
-
-export default connectToDatabase;
+//,
+//
+module.exports= connectToDatabase;
